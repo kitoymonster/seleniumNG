@@ -1,0 +1,134 @@
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class UM_AllHistory {
+	public static WebElement element = null;
+
+	// Period
+	public static WebElement period(WebDriver driver) throws InterruptedException {
+		element = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(
+				By.xpath("html/body/div[1]/div[2]/div/section/div[2]/div/div[1]/div[1]/div/div/div/input")));
+		return element;
+	}
+
+	// Period - from (mmm dd,yyyy)
+	public static WebElement periodFrom(WebDriver driver) throws InterruptedException {
+		element = (new WebDriverWait(driver, 10))
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[2]/div[3]/div/div[1]/input")));
+		return element;
+	}
+
+	// Period - to (mmm dd,yyyy)
+	public static WebElement periodTo(WebDriver driver) throws InterruptedException {
+		element = (new WebDriverWait(driver, 10))
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[2]/div[3]/div/div[2]/input")));
+		return element;
+	}
+
+	// Period - apply
+	public static WebElement periodApply(WebDriver driver) throws InterruptedException {
+		element = (new WebDriverWait(driver, 10))
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("html/body/div[2]/div[3]/div/button[1]")));
+		return element;
+	}
+
+	public static WebElement btnFiltering(WebDriver driver) {
+		TraceLog.start("UM_AllHistory.btnFiltering");
+		
+		element = GetElementBy.byCssSelector(driver, "div.ui.icon.right.labeled.primary.button");
+		
+		TraceLog.ended("UM_AllHistory.btnFiltering");
+		return element;
+	}
+	
+	public static WebElement sortTransactionDate(WebDriver driver) {
+		TraceLog.start("UM_AllHistory.sortTransactionDate");
+		
+		element = GetElementBy.byXpath(driver, "html/body/div[1]/div[2]/div/section/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div/div/div/div/div[1]/div[1]/div[1]/span[1]");
+		
+		TraceLog.ended("UM_AllHistory.sortTransactionDate");
+		return element;
+	}
+	
+	public static WebElement sortDescription(WebDriver driver) {
+		TraceLog.start("UM_AllHistory.sortDescription");
+		
+		element = GetElementBy.byXpath(driver, "html/body/div[1]/div[2]/div/section/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div/div/div/div/div[2]/div[2]/div[1]/span[1]");
+		
+		TraceLog.ended("UM_AllHistory.sortDescription");
+		return element;
+	}
+
+	public static WebElement sortUser(WebDriver driver) {
+		TraceLog.start("UM_AllHistory.sortUser");
+		
+		element = GetElementBy.byXpath(driver, "html/body/div[1]/div[2]/div/section/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div/div/div/div/div[3]/div[2]/div[1]/span[1]");
+		
+		TraceLog.start("UM_AllHistory.sortUser");
+		return element;
+	}
+	
+	public static WebElement sortRole(WebDriver driver) {
+		TraceLog.start("UM_AllHistory.sortCategory");
+		
+		element = GetElementBy.byXpath(driver, "html/body/div[1]/div[2]/div/section/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div/div/div/div/div[4]/div[2]/div[1]/span[1]");
+		
+		TraceLog.ended("UM_AllHistory.sortCategory");
+		return element;
+	}
+	
+	public static WebElement header(WebDriver driver) {
+		TraceLog.start("UM_AllHistory.header");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='activity']/div[1]/span");
+		
+		TraceLog.ended("UM_AllHistory.header");
+		return element;
+	}
+	
+	
+	public static List<WebElement> columnResize(WebDriver driver) {
+		TraceLog.start("UM_AllHistory.header");
+		
+		List<WebElement> elements = null;
+		elements = GetElementsBy.byCssSelector(driver, "div.ui-grid-column-resizer.ng-scope.ng-isolate-scope.right");
+		
+		TraceLog.ended("UM_AllHistory.header");
+		return elements;
+	}
+
+	// filter - description
+	public static WebElement filterDescriptionText(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_AllHistory.filterDescriptionText");
+		
+		element = GetElementBy.byXpath(driver, "html/body/div[1]/div[2]/div/section/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/input");
+				
+		TraceLog.ended("UM_AllHistory.filterDescriptionText");
+		return element;
+	}
+	
+	public static WebElement filterUserText(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_AllHistory.filterUserText");
+		
+		element = GetElementBy.byXpath(driver, "html/body/div[1]/div[2]/div/section/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div/div/div/div/div[3]/div[2]/div[2]/div/div/input");
+		
+		TraceLog.ended("UM_AllHistory.filterUserText");
+		return element;
+	}
+
+	public static WebElement filterRoleText(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_AllHistory.filterRoleText");
+		
+		element = GetElementBy.byXpath(driver, "html/body/div[1]/div[2]/div/section/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div/div/div/div/div[4]/div[2]/div[2]/div/div/input");
+		
+		TraceLog.ended("UM_AllHistory.filterRoleText");
+		return element;
+	}
+	
+}
