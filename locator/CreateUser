@@ -1,0 +1,445 @@
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+public class UM_Register {
+	public static WebElement element = null;
+	public static List<WebElement> elements = null;
+
+	// user management - registration
+	public static WebElement registrationTab(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.registrationTab");
+		
+		element = GetElementBy.byXpath(driver, "/html/body/div[1]/div[1]/div[1]/div[4]/ul/li[1]/a");
+
+		TraceLog.ended("UM_Register.registrationTab");
+		return element;
+	}
+	
+	// username
+	public static WebElement firstName(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.firstname");
+		
+		element = GetElementBy.byName(driver, "firstName");
+
+		TraceLog.ended("UM_Register.firstname");
+		return element;
+	}
+	
+	// middlename
+	public static WebElement middleName(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.middleName");
+		
+		element = GetElementBy.byName(driver, "middleName");
+
+		TraceLog.ended("UM_Register.middleName");
+		return element;
+	}
+	
+	// lastname
+	public static WebElement lastName(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.lastName");
+		
+		element = GetElementBy.byName(driver, "lastName");
+
+		TraceLog.ended("UM_Register.lastName");
+		return element;
+	}
+	
+	// birthdate
+	public static WebElement birthDate(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.birthDate");
+		
+		element = GetElementBy.byName(driver, "birthDate");
+
+		TraceLog.ended("UM_Register.birthDate");
+		return element;
+	}
+	
+	// month
+	public static WebElement month(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.month");
+		
+		element = GetElementBy.byClassName(driver, "monthselect");
+
+		TraceLog.ended("UM_Register.month");
+		return element;
+	}
+	
+	// year
+	public static WebElement year(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.year");
+		
+		element = GetElementBy.byClassName(driver, "yearselect");
+
+		TraceLog.ended("UM_Register.year");
+		return element;
+	}
+	
+	// day
+	public static WebElement day(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.day");
+		
+		element = GetElementBy.byXpath(driver, "/html/body/div[2]/div[1]/div/table/tbody/tr[2]/td[3]");
+
+		TraceLog.ended("UM_Register.day");
+		return element;
+	}
+	
+	// sex - male
+	public static WebElement sexMale(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.sexMale");
+		
+		element = GetElementBy.byId(driver, "male");
+
+		TraceLog.ended("UM_Register.sexMale");
+		return element;
+	}
+	
+	// sex - female
+	public static WebElement sexFemale(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.sexMale");
+		
+		element = GetElementBy.byId(driver, "female");
+
+		TraceLog.ended("UM_Register.sexMale");
+		return element;
+	}
+	
+	// email
+	public static WebElement email(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.email");
+		
+		element = GetElementBy.byName(driver, "email");
+
+		TraceLog.ended("UM_Register.email");
+		return element;
+	}
+	
+	public static WebElement username(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.username");
+		
+		element = GetElementBy.byName(driver, "username");
+
+		TraceLog.ended("UM_Register.username");
+		return element;
+	}
+	
+	// country
+	public static WebElement country(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.country");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[8]/div[2]/div");
+		
+		TraceLog.ended("UM_Register.country");
+		return element;
+	}
+	
+	public static List<WebElement> countrylist(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.countrylist");
+		
+		elements = GetElementsBy.byXpath(driver, "//*[@class='menu transition visible']//*[contains(@class, 'item')]");
+		
+		TraceLog.ended("UM_Register.countrylist");
+		return elements;
+	}
+
+	// role
+	public static WebElement role(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.role");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[9]/div[2]/div");
+
+		TraceLog.ended("UM_Register.role");
+		return element;
+	}
+	
+	public static List<WebElement> rolelist(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.rolelist");
+		
+		elements = GetElementsBy.byXpath(driver, "//*[@class='menu transition visible']//*[contains(@class, 'item')]");
+		
+		TraceLog.ended("UM_Register.rolelist");
+		return elements;
+	}
+	
+	// country - afg
+	public static WebElement countryAFG(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.countryAFG");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[9]/div[2]/div/div[2]/div[1]");
+
+		TraceLog.ended("UM_Register.countryAFG");
+		return element;
+	}
+	
+	// country - bang
+	public static WebElement countryBANG(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.countryBANG");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[9]/div[2]/div/div[2]/div[2]");
+
+		TraceLog.ended("UM_Register.countryBANG");
+		return element;
+	}
+	
+	// country - ind
+	public static WebElement countryIND(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.countryIND");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[9]/div[2]/div/div[2]/div[3]");
+
+		TraceLog.ended("UM_Register.countryIND");
+		return element;
+	}
+	
+	// country - pak
+	public static WebElement countryPAK(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.countryPAK");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[9]/div[2]/div/div[2]/div[4]");
+
+		TraceLog.ended("UM_Register.countryPAK");
+		return element;
+	}
+	
+	// country - phl
+	public static WebElement countryPHL(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.countryPHL");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[9]/div[2]/div/div[2]/div[5]");
+
+		TraceLog.ended("UM_Register.countryPHL");
+		return element;
+	}
+	
+	// country - lka
+	public static WebElement countryLKA(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.countryLKA");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[9]/div[2]/div/div[2]/div[6]");
+
+		TraceLog.ended("UM_Register.countryLKA");
+		return element;
+	}
+	
+	// country - Tha
+	public static WebElement countryTHA(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.countryTHA");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[9]/div[2]/div/div[2]/div[7]");
+
+		TraceLog.ended("UM_Register.countryTHA");
+		return element;
+	}
+	
+	// role - administrator
+	public static WebElement roleAdministrator(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.roleAdministrator");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[10]/div[2]/div/div[2]/div[1]");
+
+		TraceLog.ended("UM_Register.roleAdministrator");
+		return element;
+	}
+	
+	// role - asia coordinator
+	public static WebElement roleAsiaCoord(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.roleAsiaCoord");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[10]/div[2]/div/div[2]/div[2]");
+
+		TraceLog.ended("UM_Register.roleAsiaCoord");
+		return element;
+	}
+	
+	// role - assistant national coordinator
+	public static WebElement roleAssistantNationalCoord(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.roleAssistantNationalCoord");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[10]/div[2]/div/div[2]/div[3]");
+
+		TraceLog.ended("UM_Register.roleAssistantNationalCoord");
+		return element;
+	}
+	
+	// role - country coordinator
+	public static WebElement roleCountryCoord(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.roleCountryCoord");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[10]/div[2]/div/div[2]/div[4]");
+
+		TraceLog.ended("UM_Register.roleCountryCoord");
+		return element;
+	}
+	
+	// role - it department
+	public static WebElement roleITdept(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.roleITdept");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[10]/div[2]/div/div[2]/div[5]");
+
+		TraceLog.ended("UM_Register.roleITdept");
+		return element;
+	}
+	
+	// role - national coordinator
+	public static WebElement roleNationalCoord(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.roleNationalCoord");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[10]/div[2]/div/div[2]/div[6]");
+
+		TraceLog.ended("UM_Register.roleNationalCoord");
+		return element;
+	}
+	
+	// role - quality development coordinator
+	public static WebElement roleQualityDevCoord(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.roleQualityDevCoord");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[10]/div[2]/div/div[2]/div[7]");
+
+		TraceLog.ended("UM_Register.roleQualityDevCoord");
+		return element;
+	}
+	
+	// role - rao
+	public static WebElement roleRAO(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.roleRAO");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[10]/div[2]/div/div[2]/div[8]");
+
+		TraceLog.ended("UM_Register.roleRAO");
+		return element;
+	}
+	
+	// role - regional coordinator
+	public static WebElement roleRegCoord(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.roleRegCoord");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='registrationForm']/div[10]/div[2]/div/div[2]/div[9]");
+
+		TraceLog.ended("UM_Register.roleRegCoord");
+		return element;
+	}
+	
+	// submit
+	public static WebElement submit(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.submit");
+		
+		element = GetElementBy.byId(driver, "addUserBtn");
+
+		TraceLog.ended("UM_Register.submit");
+		return element;
+	}
+	
+	// clear
+	public static WebElement clear(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.clear");
+		
+		element = GetElementBy.byId(driver, "resetBtn");
+
+		TraceLog.ended("UM_Register.clear");
+		return element;
+	}
+	
+	// successful
+	public static WebElement successful(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.successful");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='successModal']/div[1]/span");
+
+		TraceLog.ended("UM_Register.successful");
+		return element;
+	}
+	
+	// OK
+	public static WebElement OK(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.OK");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='confirmBtn']");
+
+		TraceLog.ended("UM_Register.OK");
+		return element;
+	}
+	
+	// view registered users
+	public static WebElement viewRegisteredUsers(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.viewRegisteredUsers");
+		
+		element = GetElementBy.byId(driver, "viewUsers");
+
+		TraceLog.ended("UM_Register.viewRegisteredUsers");
+		return element;
+	}
+	
+	// title
+	public static WebElement title(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.title");
+		
+		element = GetElementBy.byId(driver, "viewUsers");
+
+		TraceLog.ended("UM_Register.title");
+		return element;
+	}
+	
+	// login failed
+	public static WebElement loginFailed(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.loginFailed");
+		
+		element = GetElementBy.byXpath(driver, "/html/body/div/div/div/div[1]/div");
+
+		TraceLog.ended("UM_Register.loginFailed");
+		return element;
+	}
+	
+	// username does not exist
+	public static WebElement message(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.message");
+		
+		element = GetElementBy.byXpath(driver, "/html/body/div/div/div/div[1]/p");
+
+		TraceLog.ended("UM_Register.message");
+		return element;
+	}
+	
+	// new user dialog
+	public static WebElement registerHeader(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.registerHeader");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='successModal']/div[1]/span");
+				
+
+		TraceLog.ended("UM_Register.registerHeader");
+		return element;
+	}
+	
+	public static WebElement registerMessage(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.registerMessage");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='successModal']/div[2]");
+
+		TraceLog.ended("UM_Register.registerMessage");
+		return element;
+	}
+	
+	public static WebElement registerBtnOK(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.registerBtnOK");
+		
+		element = GetElementBy.byXpath(driver, "//*[@id='confirmBtn']");
+
+		TraceLog.ended("UM_Register.registerBtnOK");
+		return element;
+	}
+	
+	// failed notification
+	public static List<WebElement> invalidUserDetailMessages(WebDriver driver) throws InterruptedException {
+		TraceLog.start("UM_Register.invalidUserDetailMessages");
+		
+		List<WebElement> elements =  GetElementsBy.byXpath(driver, "//*[@class='ui error message']/*[@class='list']/li");
+
+		TraceLog.ended("UM_Register.invalidUserDetailMessages");
+		return elements;
+	}
+}
