@@ -12,7 +12,7 @@ public class Import {
 	public static WebElement pageHeader(WebDriver driver) {
 		TraceLog.start("DM_Import.pageHeader");
 		
-		element = GetElementBy.byClassName(driver, "knh-table-header");
+		element = GetElementBy.byClassName(driver, "xxx-table-header");
 		
 		TraceLog.ended("DM_Import.pageHeader");
 		return element;
