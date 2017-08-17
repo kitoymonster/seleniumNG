@@ -1,5 +1,3 @@
-package org.knh.pds.utility;
-
 import java.io.PrintStream;
 
 public class TraceLog {
