@@ -1,7 +1,6 @@
 
 import java.util.Arrays;
 
-import org.knh.pds.constants.Constants;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -17,8 +16,8 @@ public class Browsers {
 	public EventFiringWebDriver Drivers() {
 		WebDriver driver = null;
 		TraceLog.output("Browser: Chrome");
-		System.setProperty(Constants.SYSKEY_WEB_DRIVER_CHROME,
-				System.getProperty(Constants.SYSKEY_USER_DIR) + "\\BrowserDrivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",
+				System.getProperty("user.dir") + "\\BrowserDrivers\\chromedriver.exe");
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		capabilities.setCapability("chrome.switches", Arrays.asList("--incognito"));
 		driver = new ChromeDriver(capabilities);
