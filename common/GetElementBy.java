@@ -1,4 +1,3 @@
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -55,7 +54,7 @@ public class GetElementBy {
 	
 	public static WebElement byXpathThatContainsText(WebDriver driver, String value) throws InterruptedException {
 		WebElement element = (new WebDriverWait(driver, 30)).until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//*[contains(text(), '"+ value +"')]")));
+				.elementToBeClickable(By.xpath(".//*[text()[contains(., '"+ value +"')]]")));
 		return element;
 	}
 }
