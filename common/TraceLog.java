@@ -1,3 +1,4 @@
+package org.knh.pds.utility;
 
 import java.io.PrintStream;
 
@@ -23,9 +24,9 @@ public class TraceLog {
 		writeLog(msg, Utilities.consoleOutputStream, Utilities.fileOutputStream);
 	}
 	
-	public static void output(String message) {
+	public static void output(Object message) {
 		msg = Utilities.getCurrentDate("yyyyMMdd'T'HHmmssSSS") + 
-				Utilities.tabDisplay.substring(0, Utilities.gTraceLogDepth) + " " + message;
+				Utilities.tabDisplay.substring(0, Utilities.gTraceLogDepth) + " " + message.toString();
 		writeLog(msg, Utilities.consoleOutputStream, Utilities.fileOutputStream);
 	}
 	
