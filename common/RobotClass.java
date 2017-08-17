@@ -1,4 +1,3 @@
-
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -136,5 +135,14 @@ public class RobotClass {
 		rb.mouseWheel(move);
 		
 		TraceLog.ended("RobotClass.mouseWheelDown");
+	}
+	
+	public static void mouseWheelUp(int move) throws AWTException {
+		TraceLog.start("RobotClass.mouseWheelUp");
+		
+		Robot rb = new Robot();
+		rb.mouseWheel(-move);
+		
+		TraceLog.ended("RobotClass.mouseWheelUp");
 	}
 }
